@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #a9a9a9;
     margin: 0;
     padding: 0;
 }
@@ -36,7 +36,7 @@ table th, table td {
 }
 
 button {
-    background-color: #5cb85c;
+    background-color: #006400;
     color: white;
     padding: 10px 15px;
     border: none;
