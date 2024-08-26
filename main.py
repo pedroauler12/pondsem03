@@ -1,9 +1,9 @@
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, request, jsonify
 import pymysql
 
 app = Flask(__name__)
 
-# Configuração de conexão com o RDS MySQL
+
 db = pymysql.connect(
     host="pond3-database.cdugtaxwrdsa.us-east-1.rds.amazonaws.com",
     user="admin",
@@ -13,7 +13,7 @@ db = pymysql.connect(
 
 @app.route('/')
 def index():
-    return "Aplicação Web Integrada com RDS MySQL"
+    return render_template('front.html')  
 
 
 @app.route('/produtos', methods=['GET'])
@@ -32,8 +32,8 @@ def criar_produto():
     db.commit()
     return 'Produto criado com sucesso', 201
 
-
-
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

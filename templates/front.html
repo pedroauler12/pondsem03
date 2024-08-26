@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Produtos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciamento de Produtos</h1>
+        
+
+        <h2>Criar Produto</h2>
+        <form id="form-produto">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="preco">Preço:</label>
+            <input type="number" step="0.01" id="preco" name="preco" required><br><br>
+
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" name="quantidade" required><br><br>
+
+            <label for="data_cadastro">Data de Cadastro:</label>
+            <input type="date" id="data_cadastro" name="data_cadastro" required><br><br>
+
+            <button type="submit">Criar Produto</button>
+        </form>
+
+        <h2>Lista de Produtos</h2>
+        <table id="tabela-produtos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Data de Cadastro</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="{{ url_for('static', filename='back.js') }}"></script>
+</body>
+</html>
